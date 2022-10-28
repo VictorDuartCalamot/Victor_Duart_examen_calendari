@@ -40,7 +40,7 @@ class Esdeveniment {
       required this.titol,
       this.descripcio});
 }
-//void setHora()
+
 
 class EsdevenimentNou {
   static final EsdevenimentNou _Esdeveniment = EsdevenimentNou._internal();
