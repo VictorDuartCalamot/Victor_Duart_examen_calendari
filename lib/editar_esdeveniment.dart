@@ -50,13 +50,11 @@ class _EditarEsdevenimentFormState extends State<EditarEsdevenimentForm> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/');
-    ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text('Afegint esdeveniment!')));
-    },
-          tooltip:
-          'Afegir esdeveniment',
-          child:
-          const Icon(Icons.add),
+          ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Afegint esdeveniment!')));
+        },
+        tooltip: 'Afegir esdeveniment',
+        child: const Icon(Icons.add),
       ),
     );
   }

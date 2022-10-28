@@ -12,18 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      routes: {
-      '/':(context) => MyHomePage(title: "Esdeveniments"),
-      '/editar_esdeveniments': (context) => EditarEsdevenimentForm(),
-      }
-      /*home: MyHomePage(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        routes: {
+          '/': (context) => MyHomePage(title: "Esdeveniments"),
+          '/editar_esdeveniments': (context) => EditarEsdevenimentForm(),
+        }
+        /*home: MyHomePage(
         title: "My home page",
       ),*/
-    );
+        );
   }
 }
 
@@ -128,8 +128,8 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).pushNamed('/editar_esdeveniments');
-          ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text("Modifica l'esdeveniment!.")));
+          ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text("Modifica l'esdeveniment!.")));
         },
         tooltip: 'Afegir esdeveniment',
         child: const Icon(Icons.add),
