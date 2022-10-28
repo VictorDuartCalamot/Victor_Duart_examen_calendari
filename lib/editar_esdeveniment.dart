@@ -68,19 +68,3 @@ class _EditarEsdevenimentFormState extends State<EditarEsdevenimentForm> {
     );
   }
 }
-
-class EsdevenimentNou{
-  static final EsdevenimentNou _Esdeveniment = EsdevenimentNou._internal();
-
-  factory EsdevenimentNou(){
-    return _Esdeveniment;
-  }
-
-  EsdevenimentNou._internal():_titol = 'a';
-
-  String _titol;
-
-
-
-
-}

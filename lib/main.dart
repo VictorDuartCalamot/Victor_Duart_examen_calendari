@@ -36,11 +36,25 @@ class Esdeveniment {
   Esdeveniment(
       {required this.horaInici,
       required this.horaFinal,
-        //required this.hora,
+      //required this.hora,
       required this.titol,
       this.descripcio});
 }
 //void setHora()
+
+class EsdevenimentNou {
+  static final EsdevenimentNou _Esdeveniment = EsdevenimentNou._internal();
+
+  factory EsdevenimentNou() {
+    return _Esdeveniment;
+  }
+
+  EsdevenimentNou._internal() : _titol = '';
+
+  String _titol;
+
+  String get titol => _titol;
+}
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key, required this.title});
