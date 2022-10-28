@@ -32,19 +32,28 @@ class _EditarEsdevenimentFormState extends State<EditarEsdevenimentForm> {
               )
             ],
           ),
+          TextButton(
+            onPressed: () {
+              showTimePicker(
+                context: context,
+                initialTime: TimeOfDay.now(),
+              );
+            },
+            child: const Text('Pick time'),
+          ),
           TextFormField(
             decoration: const InputDecoration(labelText: "Títol"),
           ),
           Expanded(
             child: TextFormField(
               maxLines: null,
-              expands: true,
+              expands: false,
               decoration: const InputDecoration(
                 labelText: "Descripció",
                 alignLabelWithHint: true,
               ),
             ),
-          )
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
