@@ -16,9 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(
+      routes: {
+      '/':(context) => MyHomePage(title: "Esdeveniments"),
+      '/editar_esdeveniments': (context) => EditarEsdevenimentForm(),
+      }
+      /*home: MyHomePage(
         title: "My home page",
-      ),
+      ),*/
     );
   }
 }
@@ -123,8 +127,9 @@ class _MyHomePageState extends State<MyHomePage> {
           LlistatEsdevenimentsWidget(llistaEsdeveniments: widget.esdeveniments),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          Navigator.of(context).pushNamed('/editar_esdeveniments');
           ScaffoldMessenger.of(context)
-              .showSnackBar(const SnackBar(content: Text("No implementat.")));
+              .showSnackBar(const SnackBar(content: Text("Modifica l'esdeveniment!.")));
         },
         tooltip: 'Afegir esdeveniment',
         child: const Icon(Icons.add),
