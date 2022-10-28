@@ -48,12 +48,21 @@ class EsdevenimentNou {
   factory EsdevenimentNou() {
     return _Esdeveniment;
   }
-
-  EsdevenimentNou._internal() : _titol = '';
+  EsdevenimentNou._internal():
+        _titol = '',
+        _horaInici = DateTime.now(),
+      _horaFinal = DateTime.now(),
+      _descripcio = '';
 
   String _titol;
+  DateTime _horaInici;
+  DateTime _horaFinal;
+  String _descripcio;
 
   String get titol => _titol;
+  DateTime get horaInici => _horaInici;
+  DateTime get horaFinal => _horaFinal;
+  String get descripcio => _descripcio;
 }
 
 class MyHomePage extends StatefulWidget {
