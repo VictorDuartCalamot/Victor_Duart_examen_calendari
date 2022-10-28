@@ -39,7 +39,7 @@ class _EditarEsdevenimentFormState extends State<EditarEsdevenimentForm> {
                 initialTime: TimeOfDay.now(),
               );
             },
-            child: const Text('Pick time'),
+            child: const Text('Hora'),
           ),
           TextFormField(
             decoration: const InputDecoration(labelText: "Títol"),
@@ -67,4 +67,20 @@ class _EditarEsdevenimentFormState extends State<EditarEsdevenimentForm> {
       ),
     );
   }
+}
+
+class EsdevenimentNou{
+  static final EsdevenimentNou _Esdeveniment = EsdevenimentNou._internal();
+
+  factory EsdevenimentNou(){
+    return _Esdeveniment;
+  }
+
+  EsdevenimentNou._internal():_titol = 'a';
+
+  String _titol;
+
+
+
+
 }

@@ -29,15 +29,18 @@ class MyApp extends StatelessWidget {
 
 class Esdeveniment {
   final DateTime horaInici, horaFinal;
+  //final TimeOfDay hora;
   final String titol;
   final String? descripcio;
 
   Esdeveniment(
       {required this.horaInici,
       required this.horaFinal,
+        //required this.hora,
       required this.titol,
       this.descripcio});
 }
+//void setHora()
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({super.key, required this.title});
